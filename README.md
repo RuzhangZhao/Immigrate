@@ -98,7 +98,7 @@ demo_heat_map <- ggplot(data = demo_w_melt) +
   labs(x = "features", y= "features")
 ```
 
-<img src="http://ruzhangzhao.github.io/figure/HeatMapImmigrate.pdf" alt="Alt" style="zoom:150%;" />
+<img src="http://ruzhangzhao.github.io/figure/HeatMapImmigrate.png" alt="Alt" style="zoom:130%;" />
 
 One can refer to the [CRAN page of **Immigrate**](https://cran.r-project.org/package=Immigrate) for details input. 
 
