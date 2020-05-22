@@ -48,7 +48,7 @@ packageVersion("Immigrate")
 
 ## Implementation Demo
 
-We first provide implementation demo for the method **IMMIGRATE**, and then, we compare the performance between **IMMIGRATE** with other popular methods. 
+We first provide implementation demo for the method **IMMIGRATE**, and then, we compare the performance of **IMMIGRATE** with other popular methods. 
 
 The data we use in this demo is from UCI Machine Learning Repository ([here](https://archive.ics.uci.edu/ml/datasets/parkinsons)).
 
@@ -98,7 +98,7 @@ demo_heat_map <- ggplot(data = demo_w_melt) +
   labs(x = "features", y= "features")
 ```
 
-<img src="http://ruzhangzhao.github.io/figure/HeatMapImmigrate.png" alt="Alt" style="zoom:110%;" />
+<img src="http://ruzhangzhao.github.io/figure/HeatMapImmigrate.png" alt="Alt" width="500px"/>
 
 One can refer to the [CRAN page of **Immigrate**](https://cran.r-project.org/package=Immigrate) for details input. 
 
@@ -158,19 +158,19 @@ The accuracy on test data is 0.793 (GLM) vs 0.914 (IMMIGRATE).
 ## Note
 
 1. Based on our experiments, the maximal iteration number in **Immigrate** does not need to be set too large.
-2. The performance of IMMIGRATE also depends on the choice of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma" title="\sigma" /></a> ( *sig* in function **Immigrate**).
-3. The default weight pruning strategy is not removing small weights. One ca choose to remove small weights by calling *removesmall = TRUE* in function **Immigrate**.
+2. The performance of **IMMIGRATE** also depends on the choice of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma" title="\sigma" /></a>( *sig* in function **Immigrate**).
+3. The default weight pruning strategy is not removing small weights. One can choose to remove small weights by calling *removesmall = TRUE* in function **Immigrate**.
 4. The default initial weight matrix is diagonal matrix. One can choose to use random initialization by calling *randomw0 = TRUE* in function **Immigrate**.
 
 
 
 ## Authors 
 
-[Ruzhang Zhao](http://ruzhangzhao.com), Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University
+[Ruzhang Zhao](http://ruzhangzhao.com), Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD 21205, USA
 
-[Pengyu Hong](https://www.cs.brandeis.edu/~hong/), Department of Computer Science Brandeis University Waltham, MA 02453, USA
+[Pengyu Hong](https://www.cs.brandeis.edu/~hong/), Department of Computer Science, Brandeis University, Waltham, MA 02453, USA
 
-[Jun S. Liu](http://sites.fas.harvard.edu/~junliu/), Department of Statistics Harvard University Cambridge, MA 02138, USA
+[Jun S. Liu](http://sites.fas.harvard.edu/~junliu/), Department of Statistics, Harvard University, Cambridge, MA 02138, USA
 
 ## Reference
 
