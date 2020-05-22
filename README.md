@@ -1,22 +1,22 @@
 # Immigrate<img src="http://ruzhangzhao.github.io/sticker/Immigrate.png" align="right" width="160px"/>: A Margin-Based Feature Selection Method with Interaction Terms
 
-[![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![Build app](https://ci.appveyor.com/api/projects/status/a28cs08ug9qng8hn?svg=true)](http://ruzhangzhao.com) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/Immigrate?color=blue)](https://cran.r-project.org/package=Immigrate) [![](http://cranlogs.r-pkg.org/badges/grand-total/Immigrate?color=green)](https://cran.r-project.org/package=Immigrate)
+[![Project Status](http://www.repostatus.org/badges/latest/active.svg)](https://cran.r-project.org/package=Immigrate) [![Build app](https://ci.appveyor.com/api/projects/status/a28cs08ug9qng8hn?svg=true)](https://cran.r-project.org/package=Immigrate) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/Immigrate?color=blue)](https://cran.r-project.org/package=Immigrate) [![](http://cranlogs.r-pkg.org/badges/grand-total/Immigrate?color=green)](https://cran.r-project.org/package=Immigrate)
 
-This project is the R code for IMMIGRATE method (**I**terative **M**ax-**MI**n entropy mar**G**in-maximization with inte**RA**ction **TE**rms algorithm, IMMIGRATE, henceforth).
+This project is the R code for **IMMIGRATE** method (**I**terative **M**ax-**MI**n entropy mar**G**in-maximization with inte**RA**ction **TE**rms algorithm, IMMIGRATE, henceforth).
 
 IMMIGRATE is a hypothesis-margin based feature selection method with interaction terms. For more details, please refer to the paper ([published version](https://www.mdpi.com/1099-4300/22/3/291) , [arXiv](https://arxiv.org/pdf/1810.02658.pdf)).
 
 Based on large hypothesis-margin principle, this package performs some feature selection methods: 
 
-$\texttt{Immigrate}$  (Iterative Max-Min Entropy Margin-Maximization with Interaction Terms Algorithm); 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\texttt{Immigrate}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\texttt{Immigrate}" title="\texttt{Immigrate}" /></a> (Iterative Max-Min Entropy Margin-Maximization with Interaction Terms Algorithm); 
 
-$\texttt{BIM}$  (Booster version of IMMIGRATE);
+<a href="https://www.codecogs.com/eqnedit.php?latex=\texttt{BIM}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\texttt{BIM}" title="\texttt{BIM}" /></a>  (Booster version of IMMIGRATE);
 
-$\texttt{IM4E}$  (Iterative Margin-Maximization under Max-Min Entropy Algorithm); 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\texttt{IM4E}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\texttt{IM4E}" title="\texttt{IM4E}" /></a> (Iterative Margin-Maximization under Max-Min Entropy Algorithm); 
 
-$\texttt{Simba}$  (Iterative Search Margin Based Algorithm); 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\texttt{Simba}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\texttt{Simba}" title="\texttt{Simba}" /></a>  (Iterative Search Margin Based Algorithm); 
 
-$\texttt{LFE}$  (Local Feature Extraction Algorithm). 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\texttt{LFE}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\texttt{LFE}" title="\texttt{LFE}" /></a>  (Local Feature Extraction Algorithm). 
 
 This package also performs prediction for the above feature selection methods.
 
@@ -72,7 +72,7 @@ Using all the data as training data, we have
 demo_Immigrate<-Immigrate(park$xx,park$yy)
 ```
 
-To visualize the results, we show an interesting heat map from the weight matrix obtained by $\texttt{demo_Immigrate}$. 
+To visualize the results, we show an interesting heat map from the weight matrix obtained here.
 
 ```R
 if(!require(ggplot2)){
@@ -98,7 +98,7 @@ demo_heat_map <- ggplot(data = demo_w_melt) +
   labs(x = "features", y= "features")
 ```
 
-<img src="http://ruzhangzhao.com/figure/HeatMapImmigrate.pdf" alt="Alt" style="zoom:150%;" />
+<img src="http://ruzhangzhao.github.io/figure/HeatMapImmigrate.pdf" alt="Alt" style="zoom:150%;" />
 
 One can refer to the [CRAN page of **Immigrate**](https://cran.r-project.org/package=Immigrate) for details input. 
 
@@ -157,10 +157,10 @@ The accuracy on test data is 0.793 (GLM) vs 0.914 (IMMIGRATE).
 
 ## Note
 
-1. Based on our experiments, the maximal iteration number in $\texttt{Immigrate}$ does not need to be set too large.
-2. The performance of IMMIGRATE also depends on the choice of $\sigma$ ($\texttt{sig}$ in function $\texttt{Immigrate}$).
-3. The default weight pruning strategy is not removing small weights. One ca choose to remove small weights by calling $\texttt{removesmall} = \text{TRUE}$ in function $\texttt{Immigrate}$.
-4. The default initial weight matrix is diagonal matrix. One can choose to use random initialization by calling $\texttt{randomw0} = \text{TRUE}$ in function $\texttt{Immigrate}$.
+1. Based on our experiments, the maximal iteration number in **Immigrate** does not need to be set too large.
+2. The performance of IMMIGRATE also depends on the choice of <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma" title="\sigma" /></a> ( *sig* in function **Immigrate**).
+3. The default weight pruning strategy is not removing small weights. One ca choose to remove small weights by calling *removesmall = TRUE* in function **Immigrate**.
+4. The default initial weight matrix is diagonal matrix. One can choose to use random initialization by calling *randomw0 = TRUE* in function **Immigrate**.
 
 
 
@@ -178,16 +178,10 @@ Please use the link https://www.mdpi.com/1099-4300/22/3/291 for our paper: IMMIG
 
 Please use the link [https://cran.r-project.org/package=Immigrate](https://cran.r-project.org/package=Immigrate) for the R package.
 
-We also implement the following three methods in this R package. 
+We also implement the following three hypothesis-margin based methods in this R package. 
 
-$\texttt{IM4E}$ :
+*IM4E*: Bei, Yuanzhe, and Pengyu Hong. "Maximizing margin quality and quantity." *2015 IEEE 25th International Workshop on Machine Learning for Signal Processing (MLSP)*. IEEE, 2015.
 
-Bei, Yuanzhe, and Pengyu Hong. "Maximizing margin quality and quantity." *2015 IEEE 25th International Workshop on Machine Learning for Signal Processing (MLSP)*. IEEE, 2015.
+*Simba*: Gilad-Bachrach, Ran, Amir Navot, and Naftali Tishby. "Margin based feature selection-theory and algorithms." *Proceedings of the twenty-first international conference on Machine learning*. 2004.
 
-$\texttt{Simba}$ :
-
-Gilad-Bachrach, Ran, Amir Navot, and Naftali Tishby. "Margin based feature selection-theory and algorithms." *Proceedings of the twenty-first international conference on Machine learning*. 2004.
-
-$\texttt{LFE}$ : 
-
-Sun, Yijun, and Dapeng Wu. "A relief based feature extraction algorithm." *Proceedings of the 2008 SIAM International Conference on Data Mining*. Society for Industrial and Applied Mathematics, 2008.
+*LFE*: Sun, Yijun, and Dapeng Wu. "A relief based feature extraction algorithm." *Proceedings of the 2008 SIAM International Conference on Data Mining*. Society for Industrial and Applied Mathematics, 2008.
