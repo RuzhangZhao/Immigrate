@@ -18,11 +18,11 @@ one.IM4E(train_xx, train_yy, w, sig = 1, lambda = 1)
 \item{lambda}{lambda used in algorithm, default to be 1}
 }
 \value{
-\item{w}{weights}
+\item{w}{new weight vector after one loop}
 
-\item{C}{cost}
+\item{C}{cost after one loop}
 }
 \description{
-This function performs Iterative Margin-Maximization under Max-Min Entropy algorithm for one loop.
+This function performs (IM4E)Iterative Margin-Maximization under Max-Min Entropy algorithm for one loop.
 }
 \keyword{IM4E}

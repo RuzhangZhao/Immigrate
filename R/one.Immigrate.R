@@ -7,7 +7,7 @@
 #' @param sig sigma used in algorithm, default to be 1
 #' @keywords Immigrate one
 #' @return \item{W}{new weight matrix after one loop}
-#' @return \item{C}{ cost after one loop}
+#' @return \item{C}{cost after one loop}
 #' @export
 #' 
 #' @examples
@@ -17,7 +17,7 @@
 #' W0 <- diag(rep(1,ncol(xx)),ncol(xx))/sqrt(ncol(xx))
 #' re<-one.Immigrate(xx,yy,W0)
 #' print(re$w)
-#' 
+#' @seealso Please refer to \url{https://github.com/RuzhangZhao/Immigrate/} for implementation demo.
 
 one.Immigrate<-function(train_xx,train_yy,W,sig=1){
   # compute the sample size and the number of variables

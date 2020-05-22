@@ -1,13 +1,13 @@
 #' predict.LFE
 #'
 #' This function performs predition for LFE(Local Feature Extraction) algorithm.
-#' @param object weight 
+#' @param object weights obtained from LFE
 #' @param xx model matrix of explanatory variables
 #' @param yy label vector 
-#' @param newx model matrix to be preded 
+#' @param newx new model matrix to be predicted 
 #' @param ... further arguments passed to or from other methods
-#' @keywords predict LFE
-#' @return predicted labels
+#' @keywords predict the label of new data based on LFE
+#' @return predicted labels for new data (newx)
 #' @importFrom stats predict
 
 #' @export
@@ -18,6 +18,7 @@
 #' w<-LFE(xx,yy)
 #' pred<-predict(w,xx,yy,xx)
 #' print(pred)
+#' @references Sun Y, Wu D. A relief based feature extraction algorithm[C]//Proceedings of the 2008 SIAM International Conference on Data Mining. Society for Industrial and Applied Mathematics, 2008: 188-195.
 
 predict.LFE<-function(object,xx,yy,newx,...){
   w<-object

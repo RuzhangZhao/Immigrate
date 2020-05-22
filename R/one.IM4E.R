@@ -1,14 +1,14 @@
 #' one.IM4E
 #'
-#' This function performs Iterative Margin-Maximization under Max-Min Entropy algorithm for one loop.
+#' This function performs (IM4E)Iterative Margin-Maximization under Max-Min Entropy algorithm for one loop.
 #' @param train_xx model matrix of explanatory variables
 #' @param train_yy label vector
 #' @param w initial weight
 #' @param sig sigma used in algorithm, default to be 1
 #' @param lambda lambda used in algorithm, default to be 1
 #' @keywords IM4E
-#' @return \item{w}{weights} 
-#' @return \item{C}{cost} 
+#' @return \item{w}{new weight vector after one loop} 
+#' @return \item{C}{cost after one loop} 
 #' 
 #' 
 one.IM4E<-function(train_xx,train_yy,w,sig=1,lambda=1){

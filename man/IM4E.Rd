@@ -19,7 +19,7 @@ IM4E(
 
 \item{yy}{label vector}
 
-\item{epsilon}{criterion for stopping iteration}
+\item{epsilon}{criterion for stopping iteration, default to be 0.01}
 
 \item{sig}{sigma used in algorithm, default to be 1}
 
@@ -30,11 +30,11 @@ IM4E(
 \item{removesmall}{whether remove features with small weights, default to be FALSE}
 }
 \value{
-\item{w}{new weight after one loop}
+\item{w}{weight vector obtained by IM4E algorithm}
 
 \item{iter_num}{number of iteration for convergence}
 
-\item{final_c}{final cost}
+\item{final_c}{final cost value. Refer to the cost function in reference below for more details}
 }
 \description{
 This function performs IM4E(Iterative Margin-Maximization under Max-Min Entropy) algorithm.

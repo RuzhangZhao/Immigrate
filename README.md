@@ -100,7 +100,7 @@ demo_heat_map <- ggplot(data = demo_w_melt) +
 
 <img src="http://ruzhangzhao.github.io/figure/HeatMapImmigrate.png" alt="Alt" width="500px"/>
 
-One can refer to the [CRAN page of **Immigrate**](https://cran.r-project.org/package=Immigrate) for details input. 
+One can refer to the [CRAN page of **Immigrate**](https://cran.r-project.org/package=Immigrate) for details.
 
 ### IMMIGRATE vs Other Methods
 

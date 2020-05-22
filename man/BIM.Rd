@@ -30,20 +30,25 @@ BIM(
 \item{sigend}{end of sigma used in algorithm, default to be 4}
 }
 \value{
-\item{matrix}{list of matrix weights}
+\item{matrix}{list of weight matrices}
 
-\item{weights}{coefficient vector for classifiers}
+\item{weights}{coefficient vectors for classifiers}
 
-\item{sample_wt}{sample weights}
+\item{sample_wt}{sample weights, refer to cost function in link below for more details}
 }
 \description{
-This function performs BIM algorithm.
+This function performs BIM algorithm (Boosted version of IMMIGRATE).
 }
 \examples{
 data(park)
 xx<-park$xx
 yy<-park$yy
 re<-BIM(xx,yy)
-
+}
+\references{
+Zhao, Ruzhang, Pengyu Hong, and Jun S. Liu. "IMMIGRATE: A Margin-based Feature Selection Method with Interaction Terms." Entropy 22.3 (2020): 291.
+}
+\seealso{
+Please refer to \url{https://www.mdpi.com/1099-4300/22/3/291/htm} for more details.
 }
 \keyword{BIM}

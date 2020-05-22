@@ -18,7 +18,7 @@ one.Immigrate(train_xx, train_yy, W, sig = 1)
 \value{
 \item{W}{new weight matrix after one loop}
 
-\item{C}{ cost after one loop}
+\item{C}{cost after one loop}
 }
 \description{
 This function performs Immigrate(Iterative Max-Min Entropy Margin-Maximization with Interaction Terms) algorithm for one loop.
@@ -30,7 +30,9 @@ yy<-park$yy
 W0 <- diag(rep(1,ncol(xx)),ncol(xx))/sqrt(ncol(xx))
 re<-one.Immigrate(xx,yy,W0)
 print(re$w)
-
+}
+\seealso{
+Please refer to \url{https://github.com/RuzhangZhao/Immigrate/} for implementation demo.
 }
 \keyword{Immigrate}
 \keyword{one}

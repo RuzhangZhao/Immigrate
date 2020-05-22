@@ -1,15 +1,15 @@
 #' predict.BIM
 #'
-#' This function performs the predition for BIM algorithm.
+#' This function performs the predition for BIM algorithm (Boosted version of IMMIGRATE).
 #' @param object result of BIM algorithm
 #' @param xx model matrix of explanatory variables
 #' @param yy label vector
-#' @param newx test data
+#' @param newx new model matrix to be predicted 
 #' @param type the form of final output
 #' @param ... further arguments passed to or from other methods
-#' @keywords predict BIM
-#' @return \item{response}{preded probabilities for xx}
-#' @return \item{class}{preded class for xx}
+#' @keywords predict the label of new data based on BIM
+#' @return \item{response}{predicted probabilities for for new data (newx)}
+#' @return \item{class}{predicted class for for new data (newx)}
 #' @importFrom stats predict
 
 #' @export
@@ -25,7 +25,9 @@
 #' re<-BIM(train_xx,train_yy)
 #' res<-predict(re,train_xx,train_yy,test_xx,type="class")
 #' print(res)
-#' 
+#' @references Zhao, Ruzhang, Pengyu Hong, and Jun S. Liu. "IMMIGRATE: A Margin-based Feature Selection Method with Interaction Terms." Entropy 22.3 (2020): 291.
+#' @seealso Please refer to \url{https://www.mdpi.com/1099-4300/22/3/291/htm} for more details.
+
 
 predict.BIM<-function(object,xx,yy,newx,type = "both",...){
   TYPES <- c("both","response","class") 

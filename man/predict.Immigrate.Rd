@@ -13,18 +13,18 @@
 
 \item{yy}{label vector}
 
-\item{newx}{model matrix to be preded}
+\item{newx}{new model matrix to be predicted}
 
-\item{sig}{sigma used in algorithm, default to be 1}
+\item{sig}{sigma used in prediction function, default to be 1. Refer to the prediction function in the link below for more details}
 
-\item{type}{the form of final output, default to be "both"}
+\item{type}{the form of final output, default to be "both". One can also choose "response"(predicted probabilities) or "class"(predicted labels).}
 
 \item{...}{further arguments passed to or from other methods}
 }
 \value{
-\item{response}{preded probabilities for newx}
+\item{response}{predicted probabilities for new data (newx)}
 
-\item{class}{preded class for newx}
+\item{class}{predicted class labels for new data (newx)}
 }
 \description{
 This function performs the predition for Immigrate(Iterative Max-Min Entropy Margin-Maximization with Interaction Terms) algorithm.
@@ -41,7 +41,21 @@ test_yy<-yy[index]
 re<-Immigrate(train_xx,train_yy)
 res<-predict(re,train_xx,train_yy,test_xx,type="class")
 print(res)
+}
+\references{
+Zhao, Ruzhang, Pengyu Hong, and Jun S. Liu. "IMMIGRATE: A Margin-based Feature Selection Method with Interaction Terms." Entropy 22.3 (2020): 291.
+}
+\seealso{
+Please refer to \url{https://www.mdpi.com/1099-4300/22/3/291/htm} for more details.
 
+Please refer to \url{https://github.com/RuzhangZhao/Immigrate/} for implementation demo.
 }
 \keyword{Immigrate}
+\keyword{based}
+\keyword{data}
+\keyword{label}
+\keyword{new}
+\keyword{of}
+\keyword{on}
 \keyword{predict}
+\keyword{the}

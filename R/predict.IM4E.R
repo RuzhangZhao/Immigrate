@@ -4,13 +4,13 @@
 #' @param object weight or result of IM4E algorithm
 #' @param xx model matrix of explanatory variables
 #' @param yy label vector 
-#' @param newx model matrix to be predicted 
+#' @param newx new model matrix to be predicted 
 #' @param sig sigma used in algorithm, default to be 1
-#' @param type the form of final output, default to be "both"
+#' @param type the form of final output, default to be "both". One can also choose "response"(predicted probabilities) or "class"(predicted labels). 
 #' @param ... further arguments passed to or from other methods
-#' @keywords predict IM4E
-#' @return \item{response}{preded probabilities for newx}
-#' @return \item{class}{ preded class for newx}
+#' @keywords predict the label of new data based on IM4E
+#' @return \item{response}{predicted probabilities for new data (newx)}
+#' @return \item{class}{predicted class labels for new data (newx)}
 #' @importFrom stats predict
 
 #' @export
@@ -26,7 +26,9 @@
 #' re<-IM4E(train_xx,train_yy)
 #' res<-predict(re,train_xx,train_yy,test_xx,type="class")
 #' print(res)
-#' 
+#' @references 
+#' Bei Y, Hong P. Maximizing margin quality and quantity[C]//Machine Learning for Signal Processing (MLSP), 2015 IEEE 25th International Workshop on. IEEE, 2015: 1-6.
+
 predict.IM4E<-function(object,xx,yy,newx,sig = 1, type = "both",...){
   TYPES <- c("both","response","class") 
   typeIdx <- pmatch(type, TYPES)

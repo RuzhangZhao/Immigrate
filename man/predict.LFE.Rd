@@ -7,18 +7,18 @@
 \method{predict}{LFE}(object, xx, yy, newx, ...)
 }
 \arguments{
-\item{object}{weight}
+\item{object}{weights obtained from LFE}
 
 \item{xx}{model matrix of explanatory variables}
 
 \item{yy}{label vector}
 
-\item{newx}{model matrix to be preded}
+\item{newx}{new model matrix to be predicted}
 
 \item{...}{further arguments passed to or from other methods}
 }
 \value{
-predicted labels
+predicted labels for new data (newx)
 }
 \description{
 This function performs predition for LFE(Local Feature Extraction) algorithm.
@@ -31,5 +31,15 @@ w<-LFE(xx,yy)
 pred<-predict(w,xx,yy,xx)
 print(pred)
 }
+\references{
+Sun Y, Wu D. A relief based feature extraction algorithm[C]//Proceedings of the 2008 SIAM International Conference on Data Mining. Society for Industrial and Applied Mathematics, 2008: 188-195.
+}
 \keyword{LFE}
+\keyword{based}
+\keyword{data}
+\keyword{label}
+\keyword{new}
+\keyword{of}
+\keyword{on}
 \keyword{predict}
+\keyword{the}

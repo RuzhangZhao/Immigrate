@@ -20,11 +20,11 @@ Immigrate(
 
 \item{yy}{label vector}
 
-\item{w0}{initial weights}
+\item{w0}{initial weight matrix, default to be diagonal matrix when missing}
 
 \item{epsilon}{criterion for stopping iteration}
 
-\item{sig}{sigma used in algorithm, default to be 1}
+\item{sig}{sigma used in algorithm, default to be 1. Refer to the cost function in the link below for more details}
 
 \item{max_iter}{maximum number of iteration}
 
@@ -33,14 +33,16 @@ Immigrate(
 \item{randomw0}{whether to use randomly initial weights, default to be FALSE}
 }
 \value{
-\item{w}{new weight after one loop}
+\item{w}{weight matrix obtained by IMMIGRATE algorithm}
 
-\item{iter_num}{ number of iteration for convergence}
+\item{iter_num}{number of iteration for convergence}
 
-\item{final_c}{final cost}
+\item{final_c}{final cost value. Refer to the cost function in link below for more details}
 }
 \description{
-This function performs Immigrate(Iterative Max-Min Entropy Margin-Maximization with Interaction Terms ) algorithm.
+This function performs IMMIGRATE(Iterative Max-Min Entropy Margin-Maximization with Interaction Terms ) algorithm.
+IMMIGRATE is a hypothesis-margin based feature selection method with interaction terms.
+Its weight matrix reflects the relative importance of features and their iteractions, which can be used for feature selection.
 }
 \examples{
 data(park)
@@ -50,9 +52,11 @@ re<-Immigrate(xx,yy)
 print(re)
 }
 \references{
-Zhao R, Hong P, Liu J S. IMMIGRATE: A Margin-based Feature Selection Method with Interaction Terms[J]. arXiv preprint arXiv:1810.02658, 2018.
+Zhao, Ruzhang, Pengyu Hong, and Jun S. Liu. "IMMIGRATE: A Margin-based Feature Selection Method with Interaction Terms." Entropy 22.3 (2020): 291.
 }
 \seealso{
-\url{https://arxiv.org/abs/1810.02658} for more details.
+Please refer to \url{https://www.mdpi.com/1099-4300/22/3/291/htm} for more details.
+
+Please refer to \url{https://github.com/RuzhangZhao/Immigrate/} for implementation demo.
 }
 \keyword{Immigrate}

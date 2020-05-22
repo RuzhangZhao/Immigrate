@@ -13,18 +13,18 @@
 
 \item{yy}{label vector}
 
-\item{newx}{model matrix to be predicted}
+\item{newx}{new model matrix to be predicted}
 
 \item{sig}{sigma used in algorithm, default to be 1}
 
-\item{type}{the form of final output, default to be "both"}
+\item{type}{the form of final output, default to be "both". One can also choose "response"(predicted probabilities) or "class"(predicted labels).}
 
 \item{...}{further arguments passed to or from other methods}
 }
 \value{
-\item{response}{preded probabilities for newx}
+\item{response}{predicted probabilities for new data (newx)}
 
-\item{class}{ preded class for newx}
+\item{class}{predicted class labels for new data (newx)}
 }
 \description{
 This function performs the predition for IM4E(Iterative Margin-Maximization under Max-Min Entropy) algorithm.
@@ -41,7 +41,16 @@ test_yy<-yy[index]
 re<-IM4E(train_xx,train_yy)
 res<-predict(re,train_xx,train_yy,test_xx,type="class")
 print(res)
-
+}
+\references{
+Bei Y, Hong P. Maximizing margin quality and quantity[C]//Machine Learning for Signal Processing (MLSP), 2015 IEEE 25th International Workshop on. IEEE, 2015: 1-6.
 }
 \keyword{IM4E}
+\keyword{based}
+\keyword{data}
+\keyword{label}
+\keyword{new}
+\keyword{of}
+\keyword{on}
 \keyword{predict}
+\keyword{the}

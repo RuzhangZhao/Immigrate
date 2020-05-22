@@ -13,19 +13,19 @@
 
 \item{yy}{label vector}
 
-\item{newx}{test data}
+\item{newx}{new model matrix to be predicted}
 
 \item{type}{the form of final output}
 
 \item{...}{further arguments passed to or from other methods}
 }
 \value{
-\item{response}{preded probabilities for xx}
+\item{response}{predicted probabilities for for new data (newx)}
 
-\item{class}{preded class for xx}
+\item{class}{predicted class for for new data (newx)}
 }
 \description{
-This function performs the predition for BIM algorithm.
+This function performs the predition for BIM algorithm (Boosted version of IMMIGRATE).
 }
 \examples{
 data(park)
@@ -39,7 +39,19 @@ test_yy<-yy[index]
 re<-BIM(train_xx,train_yy)
 res<-predict(re,train_xx,train_yy,test_xx,type="class")
 print(res)
-
+}
+\references{
+Zhao, Ruzhang, Pengyu Hong, and Jun S. Liu. "IMMIGRATE: A Margin-based Feature Selection Method with Interaction Terms." Entropy 22.3 (2020): 291.
+}
+\seealso{
+Please refer to \url{https://www.mdpi.com/1099-4300/22/3/291/htm} for more details.
 }
 \keyword{BIM}
+\keyword{based}
+\keyword{data}
+\keyword{label}
+\keyword{new}
+\keyword{of}
+\keyword{on}
 \keyword{predict}
+\keyword{the}
